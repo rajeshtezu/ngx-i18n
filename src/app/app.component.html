@@ -1,4 +1,9 @@
 <main style="text-align: center; margin-top: 100px;">
+  <div style="margin-bottom: 20px; display: flex; justify-content: center">
+    <a routerLink="" style="margin-right: 10px;">Root</a>
+    <a routerLink="home">Home</a>
+  </div>
+
   <select #locale (change)="changeLocale(locale.value)">
     <option value="en">English</option>
     <option value="es">Spanish</option>
@@ -8,4 +13,8 @@
   <p>
     {{ 'HELLO_WORLD' | translate }}
   </p>
+
+  <div style="padding: 20px; background-color: lightslategray; color: #4a4a4a;">
+    <router-outlet></router-outlet>
+  </div>
 </main>
